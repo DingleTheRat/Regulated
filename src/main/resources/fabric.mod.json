@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "regulated",
+  "version": "${version}",
+  "name": "Regulated",
+  "description": "A mod that allows players to use commands, but not to their fullest extent.",
+  "authors": ["DingleTheRat"],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+  "license": "CC0-1.0",
+  "icon": "assets/regulated/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["net.dingletherat.regulated.Regulated"],
+    "client": ["net.dingletherat.regulated.RegulatedClient"],
+    "fabric-datagen": ["net.dingletherat.regulated.RegulatedDataGenerator"]
+  },
+  "mixins": [
+    "regulated.mixins.json",
+    {
+      "config": "regulated.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=0.18.4",
+    "minecraft": "26.1.1",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}

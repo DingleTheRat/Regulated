@@ -1,0 +1,19 @@
+{
+  "required": true,
+  "package": "net.dingletherat.regulated.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "GiveCommandMixin",
+    "TeleportCommandMixin",
+    "TickCommandMixin",
+    "GameRuleCommandMixin",
+    "ServerPlayerEntityMixin",
+    "LivingEntityMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  }
+}
